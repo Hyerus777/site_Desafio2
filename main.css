@@ -1,0 +1,112 @@
+:root{              /*entra na raíz do doc html para declarar variáveis: cores da página*/
+    --vermelho: #e50914;
+    --preta: #141414;
+
+}
+*{                  /*reset css, para aplicar a formatação a seguir a todos os elementos da página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tangencia o tamanho dos elementos ao tamanho da caixa (div) geral*/
+}
+
+body{               /* referencia o elemento body*/
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+/*elementos base*/
+
+header .container{  /* referencia o elemento "header" na div container*/
+    display: flex;         /*utiliza o flexbox*/
+    flex-direction: row;   
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{       /*referencia o elemento "logo"*/
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+header nav a{     /*referencia os links*/
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /*referencia a variação da ação do mouse sobre os links*/
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%0),url('/img/Os-Dez-Mandamentos-Record-800x445.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin: 10px;
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.botao{
+    margin: 10px;
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 30px;
+    font-size: 12px;
+
+    cursor: pointer;  
+    transition: .3s ease all; /*transição entre uma animação e outra*/
+
+}
+
+.botao:hover{  /*comportamento do botão quando o mouse passa em cima*/
+    background-color: white;
+    color: black;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/*Wrapper = enevelopar/classe que 'envelopa' outros elementos, qualificando-os com os mesmos atributos
+Container = garante que os elementos da página ficarão corretamente alinhados na página. Pensar a página dividida em caixas (boxes). */
